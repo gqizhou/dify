@@ -169,7 +169,7 @@ class ChatGLMLargeLanguageModel(LargeLanguageModel):
             extra_model_kwargs['user'] = user
 
         if tools and len(tools) > 0:
-            extra_model_kwargs['functions'] = [
+            extra_model_kwargs['tools'] = [
                 helper.dump_model(tool) for tool in tools
             ]
 
